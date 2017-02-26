@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+
+        <record id="ES01" model="holidays.calendar">
+            <field name="name">Festivos Nacionales de España (obligatorios)</field>
+            <field name="owner" search="[('login', '=', 'admin')]"/>
+            <field name="description">Festivos Nacionales de España conforme los apartados a), b) y c) del artículo 45.4 del Real Decreto 2001/1983</field>
+        </record>
+
+            <record id="E01ES01" model="holidays.event">
+                <field name="calendar" ref="ES01"/>
+                <field name="summary">Año Nuevo</field>
+                <field name="dtstart">2012-01-01</field>
+                <field name="status">confirmed</field>
+            </record>
+                <record id="RR01E01ES01" model="holidays.event.rrule">
+                    <field name="event" ref="E01ES01"/>
+                    <field name="freq">yearly</field>
+                    <field name="bymonth">1</field>
+                    <field name="bymonthday">1</field>
+                </record>
+
+            <record id="E02ES01" model="holidays.event">
+                <field name="calendar" ref="ES01"/>
+                <field name="summary">Fiesta del Trabajo</field>
+                <field name="dtstart">2012-01-01</field>
+                <field name="status">confirmed</field>
+            </record>
+                <record id="RR01E02ES01" model="holidays.event.rrule">
+                    <field name="event" ref="E02ES01"/>
+                    <field name="freq">yearly</field>
+                    <field name="bymonth">5</field>
+                    <field name="bymonthday">1</field>
+                </record>
+
+            <record id="E03ES01" model="holidays.event">
+                <field name="calendar" ref="ES01"/>
+                <field name="summary">Natividad del Señor</field>
+                <field name="dtstart">2012-01-01</field>
+                <field name="status">confirmed</field>
+            </record>
+                <record id="RR01E03ES01" model="holidays.event.rrule">
+                    <field name="event" ref="E03ES01"/>
+                    <field name="freq">yearly</field>
+                    <field name="bymonth">12</field>
+                    <field name="bymonthday">25</field>
+                </record>
+
+            <record id="E04ES01" model="holidays.event">
+                <field name="calendar" ref="ES01"/>
+                <field name="summary">Viernes Santo</field>
+                <field name="dtstart">2012-01-01</field>
+                <field name="status">confirmed</field>
+            </record>
+                <record id="RR01E04ES01" model="holidays.event.rrule">
+                    <field name="event" ref="E04ES01"/>
+                    <field name="freq">yearly</field>
+                    <field name="byeaster">-2</field>
+                </record>
+
+            <record id="E05ES01" model="holidays.event">
+                <field name="calendar" ref="ES01"/>
+                <field name="summary">Asuncion de la Virgen</field>
+                <field name="dtstart">2012-01-01</field>
+                <field name="status">confirmed</field>
+            </record>
+                <record id="RR01E05ES01" model="holidays.event.rrule">
+                    <field name="event" ref="E05ES01"/>
+                    <field name="freq">yearly</field>
+                    <field name="bymonth">8</field>
+                    <field name="bymonthday">15</field>
+                </record>
+
+            <record id="E06ES01" model="holidays.event">
+                <field name="calendar" ref="ES01"/>
+                <field name="summary">Todos los Santos</field>
+                <field name="dtstart">2012-01-01</field>
+                <field name="status">confirmed</field>
+            </record>
+                <record id="RR01E06ES01" model="holidays.event.rrule">
+                    <field name="event" ref="E06ES01"/>
+                    <field name="freq">yearly</field>
+                    <field name="bymonth">11</field>
+                    <field name="bymonthday">1</field>
+                </record>
+
+            <record id="E07ES01" model="holidays.event">
+                <field name="calendar" ref="ES01"/>
+                <field name="summary">La Inmaculada Concepcion</field>
+                <field name="dtstart">2012-01-01</field>
+                <field name="status">confirmed</field>
+            </record>
+                <record id="RR01E07ES01" model="holidays.event.rrule">
+                    <field name="event" ref="E07ES01"/>
+                    <field name="freq">yearly</field>
+                    <field name="bymonth">12</field>
+                    <field name="bymonthday">8</field>
+                </record>
+
+            <record id="E08ES01" model="holidays.event">
+                <field name="calendar" ref="ES01"/>
+                <field name="summary">Fiesta Nacional de España</field>
+                <field name="dtstart">2012-01-01</field>
+                <field name="status">confirmed</field>
+            </record>
+                <record id="RR01E08ES01" model="holidays.event.rrule">
+                    <field name="event" ref="E08ES01"/>
+                    <field name="freq">yearly</field>
+                    <field name="bymonth">10</field>
+                    <field name="bymonthday">12</field>
+                </record>
+
+            <record id="E09ES01" model="holidays.event">
+                <field name="calendar" ref="ES01"/>
+                <field name="summary">Dia de la Constitucion Española</field>
+                <field name="dtstart">2012-01-01</field>
+                <field name="status">confirmed</field>
+            </record>
+                <record id="RR01E09ES01" model="holidays.event.rrule">
+                    <field name="event" ref="E09ES01"/>
+                    <field name="freq">yearly</field>
+                    <field name="bymonth">12</field>
+                    <field name="bymonthday">6</field>
+                </record>
+
+        <record id="ES02" model="holidays.calendar">
+            <field name="name">Festivos Comunidad Autonoma de Madrid</field>
+            <field name="parent" ref="ES01"/>
+            <field name="owner" search="[('login', '=', 'admin')]"/>
+            <field name="description">El calendario laboral de cada año comprenderá las fiestas señaladas en los apartados a), b) y c) del art. 45.3 del R.D. 2001/1983, que no coincidan en domingo e incluirán, hasta completar un máximo de doce días de acuerdo con el orden en que se relacionan, las que correspondan del apartado d).&#xA;Las Comunidades Autónomas podrán sustituir hasta tres fiestas de las señaladas en el apartado d) del art. 45.3 del R.D. 2001/1983 (Epifanía del Señor, Jueves Santo, Corpus Christi y San José o Santiago Apóstol) por otras que por tradición le sean propias, bien con carácter permanente o en el calendario laboral de cada año.&#xA;Se encuentra también la posibilidad de sustituir el  descanso  del  lunes  de  las  fiestas  nacionales  que  coinciden  en  domingo.&#xA;Ley 8/1984, de 25 de abril, declarando fiesta de la Comunidad de Madrid la jornada del 2 de mayo.</field>
+        </record>
+
+            <record id="E01ES02" model="holidays.event">
+                <field name="calendar" ref="ES02"/>
+                <field name="summary">Fiesta de la Comunidad</field>
+                <field name="dtstart">2012-01-01</field>
+                <field name="status">confirmed</field>
+            </record>
+                <record id="RR01E01ES02" model="holidays.event.rrule">
+                    <field name="event" ref="E01ES02"/>
+                    <field name="freq">yearly</field>
+                    <field name="bymonth">5</field>
+                    <field name="bymonthday">2</field>
+                    <field name="byday">MO,TU,WE,TH,FR,SA</field>
+                </record>
+                <!-- Lunes siguiente a Fiesta de la Comunidad -->
+                <record id="RR02E01ES02" model="holidays.event.rrule">
+                    <field name="event" ref="E01ES02"/>
+                    <field name="freq">yearly</field>
+                    <field name="bymonth">5</field>
+                    <field name="bymonthday">3</field>
+                    <field name="byday">MO</field>
+                </record>
+
+            <record id="E02ES02" model="holidays.event">
+                <field name="calendar" ref="ES02"/>
+                <field name="summary">Epifanía del Señor</field>
+                <field name="dtstart">2012-01-01</field>
+                <field name="status">confirmed</field>
+            </record>
+                <record id="RR01E02ES02" model="holidays.event.rrule">
+                    <field name="event" ref="E02ES02"/>
+                    <field name="freq">yearly</field>
+                    <field name="bymonth">1</field>
+                    <field name="bymonthday">6</field>
+                    <field name="byday">0,1,2,3,4,5</field>
+                </record>
+                <!-- Lunes siguiente a Epifanía del Señor -->
+                <record id="RR02E02ES02" model="holidays.event.rrule">
+                    <field name="event" ref="E02ES02"/>
+                    <field name="freq">yearly</field>
+                    <field name="bymonth">1</field>
+                    <field name="bymonthday">7</field>
+                    <field name="byday">0</field>
+                </record>
+
+            <record id="E03ES02" model="holidays.event">
+                <field name="calendar" ref="ES02"/>
+                <field name="summary">Jueves Santo</field>
+                <field name="dtstart">2012-01-01</field>
+                <field name="status">confirmed</field>
+            </record>
+                <record id="RR01E03ES02" model="holidays.event.rrule">
+                    <field name="event" ref="E03ES02"/>
+                    <field name="freq">yearly</field>
+                    <field name="byeaster">-3</field>
+                </record>
+
+            <record id="E04ES02" model="holidays.event">
+                <field name="calendar" ref="ES02"/>
+                <field name="summary">Corpus Christi</field>
+                <field name="dtstart">2012-01-01</field>
+                <field name="status">confirmed</field>
+            </record>
+                <record id="RR01E04ES02" model="holidays.event.rrule">
+                    <field name="event" ref="E04ES02"/>
+                    <field name="freq">yearly</field>
+                    <field name="byeaster">60</field>
+                </record>
+                <!-- Decreto 158/2011, de 15 de septiembre: Fiestas laborales 2012 -->
+                <record id="EXD01E04ES02" model="holidays.event.exdate">
+                    <field name="event" ref="E04ES02"/>
+                    <field name="date">2012-06-07</field>
+                </record>
+                <!-- Decreto 104/2012, de 20 de septiembre: Fiestas laborales 2013 -->
+                <record id="EXD02E04ES02" model="holidays.event.exdate">
+                    <field name="event" ref="E04ES02"/>
+                    <field name="date">2013-05-30</field>
+                </record>
+                <!-- Decreto 206/2015, de 22 de septiembre: Fiestas laborales 2016 -->
+                <record id="EXD03E04ES02" model="holidays.event.exdate">
+                    <field name="event" ref="E04ES02"/>
+                    <field name="date">2016-05-26</field>
+                </record>
+                <!-- Decreto 88/2016, de 19 de septiembre: Fiestas laborales 2017 -->
+                <record id="EXD04E04ES02" model="holidays.event.exdate">
+                    <field name="event" ref="E04ES02"/>
+                    <field name="date">2017-06-15</field>
+                </record>
+
+            <record id="E05ES02" model="holidays.event">
+                <field name="calendar" ref="ES02"/>
+                <field name="summary">San José</field>
+                <field name="dtstart">2012-01-01</field>
+                <field name="status">confirmed</field>
+            </record>
+                <record id="RR01E05ES02" model="holidays.event.rrule">
+                    <field name="event" ref="E05ES02"/>
+                    <field name="freq">yearly</field>
+                    <field name="bymonth">3</field>
+                    <field name="bymonthday">19</field>
+                    <field name="byday">0,1,2,3,4,5</field>
+                </record>
+                <!-- Lunes siguiente a San José -->
+                <record id="RR02E05ES02" model="holidays.event.rrule">
+                    <field name="event" ref="E05ES02"/>
+                    <field name="freq">yearly</field>
+                    <field name="bymonth">3</field>
+                    <field name="bymonthday">20</field>
+                    <field name="byday">0</field>
+                </record>
+                <!-- Decreto 104/2012, de 20 de septiembre: Fiestas laborales 2013 -->
+                <record id="EXD01E05ES02" model="holidays.event.exdate">
+                    <field name="event" ref="E05ES02"/>
+                    <field name="date">2013-03-19</field>
+                </record>
+                <record id="RD01E05ES02" model="holidays.event.rdate">
+                    <field name="event" ref="E05ES02"/>
+                    <field name="date">2013-03-18</field>
+                </record>
+                <!-- Decreto 76/2013, de 26 de septiembre: Fiestas laborales 2014 -->
+                <record id="EXD02E05ES02" model="holidays.event.exdate">
+                    <field name="event" ref="E05ES02"/>
+                    <field name="date">2014-03-19</field>
+                </record>
+                <!-- Decreto 206/2015, de 22 de septiembre: Fiestas laborales 2016 -->
+                <record id="EXD03E05ES02" model="holidays.event.exdate">
+                    <field name="event" ref="E05ES02"/>
+                    <field name="date">2016-03-19</field>
+                </record>
+
+            <record id="E06ES02" model="holidays.event">
+                <field name="calendar" ref="ES02"/>
+                <field name="summary">Santiago Apóstol</field>
+                <field name="dtstart">2012-01-01</field>
+                <field name="status">confirmed</field>
+            </record>
+                <record id="RR01E06ES02" model="holidays.event.rrule">
+                    <field name="event" ref="E06ES02"/>
+                    <field name="freq">yearly</field>
+                    <field name="bymonth">7</field>
+                    <field name="bymonthday">25</field>
+                    <field name="byday">0,1,2,3,4,5</field>
+                </record>
+                <!-- Lunes siguiente a Santiago Apóstol -->
+                <record id="RR02E06ES02" model="holidays.event.rrule">
+                    <field name="event" ref="E06ES02"/>
+                    <field name="freq">yearly</field>
+                    <field name="bymonth">7</field>
+                    <field name="bymonthday">26</field>
+                    <field name="byday">0</field>
+                </record>
+                <!-- Decreto 158/2011, de 15 de septiembre: Fiestas laborales 2012 -->
+                <record id="EXD01E06ES02" model="holidays.event.exdate">
+                    <field name="event" ref="E06ES02"/>
+                    <field name="date">2012-07-25</field>
+                </record>
+                <!-- Decreto 104/2012, de 20 de septiembre: Fiestas laborales 2013 -->
+                <record id="EXD02E06ES02" model="holidays.event.exdate">
+                    <field name="event" ref="E06ES02"/>
+                    <field name="date">2013-07-25</field>
+                </record>
+                <!-- Decreto 76/2013, de 26 de septiembre: Fiestas laborales 2014 -->
+                <record id="EXD03E06ES02" model="holidays.event.exdate">
+                    <field name="event" ref="E06ES02"/>
+                    <field name="date">2014-07-25</field>
+                </record>
+                <!-- Decreto 109/2014, de 18 de septiembre: Fiestas laborales 2015 -->
+                <record id="EXD04E06ES02" model="holidays.event.exdate">
+                    <field name="event" ref="E06ES02"/>
+                    <field name="date">2015-07-25</field>
+                </record>
+                <!-- Decreto 88/2016, de 19 de septiembre: Fiestas laborales 2017 -->
+                <record id="EXD05E06ES02" model="holidays.event.exdate">
+                    <field name="event" ref="E06ES02"/>
+                    <field name="date">2017-07-25</field>
+                </record>
+    </data>
+</tryton>
