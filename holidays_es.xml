@@ -63,7 +63,7 @@ this repository contains the full copyright notices and license terms. -->
 
             <record id="E05ES01" model="holidays.event">
                 <field name="calendar" ref="ES01"/>
-                <field name="summary">Asuncion de la Virgen</field>
+                <field name="summary">Asunción de la Virgen</field>
                 <field name="dtstart">2012-01-01</field>
                 <field name="status">confirmed</field>
             </record>
@@ -89,7 +89,7 @@ this repository contains the full copyright notices and license terms. -->
 
             <record id="E07ES01" model="holidays.event">
                 <field name="calendar" ref="ES01"/>
-                <field name="summary">La Inmaculada Concepcion</field>
+                <field name="summary">La Inmaculada Concepción</field>
                 <field name="dtstart">2012-01-01</field>
                 <field name="status">confirmed</field>
             </record>
@@ -115,7 +115,7 @@ this repository contains the full copyright notices and license terms. -->
 
             <record id="E09ES01" model="holidays.event">
                 <field name="calendar" ref="ES01"/>
-                <field name="summary">Dia de la Constitucion Española</field>
+                <field name="summary">Día de la Constitución Española</field>
                 <field name="dtstart">2012-01-01</field>
                 <field name="status">confirmed</field>
             </record>
