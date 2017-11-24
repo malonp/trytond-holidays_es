@@ -220,6 +220,11 @@ this repository contains the full copyright notices and license terms. -->
                     <field name="event" ref="E04ES02"/>
                     <field name="date">2017-06-15</field>
                 </record>
+                <!-- Decreto 83/2017, de 26 de septiembre: Fiestas laborales 2018 -->
+                <record id="EXD05E04ES02" model="holidays.event.exdate">
+                    <field name="event" ref="E04ES02"/>
+                    <field name="date">2018-05-31</field>
+                </record>
 
             <record id="E05ES02" model="holidays.event">
                 <field name="calendar" ref="ES02"/>
@@ -260,6 +265,11 @@ this repository contains the full copyright notices and license terms. -->
                 <record id="EXD03E05ES02" model="holidays.event.exdate">
                     <field name="event" ref="E05ES02"/>
                     <field name="date">2016-03-19</field>
+                </record>
+                <!-- Decreto 83/2017, de 26 de septiembre: Fiestas laborales 2018 -->
+                <record id="EXD04E05ES02" model="holidays.event.exdate">
+                    <field name="event" ref="E05ES02"/>
+                    <field name="date">2018-03-19</field>
                 </record>
 
             <record id="E06ES02" model="holidays.event">
@@ -307,6 +317,11 @@ this repository contains the full copyright notices and license terms. -->
                 <record id="EXD05E06ES02" model="holidays.event.exdate">
                     <field name="event" ref="E06ES02"/>
                     <field name="date">2017-07-25</field>
+                </record>
+                <!-- Decreto 83/2017, de 26 de septiembre: Fiestas laborales 2018 -->
+                <record id="EXD06E06ES02" model="holidays.event.exdate">
+                    <field name="event" ref="E06ES02"/>
+                    <field name="date">2018-07-25</field>
                 </record>
     </data>
 </tryton>
